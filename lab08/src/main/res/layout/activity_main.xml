@@ -14,14 +14,14 @@
         android:id="@+id/iv_photo"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginLeft="100dp"
+        android:layout_marginLeft="120dp"
         android:adjustViewBounds="true"
         android:src="@drawable/ic_launcher_background" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="10dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -111,7 +111,8 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -120,6 +121,38 @@
                 android:layout_marginTop="20dp"
                 android:text="평점 및 리뷰"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp">
+
+                <TextView
+                    android:id="@+id/sum_star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.0"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+                <TextView
+                    android:id="@+id/count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="0"/>
+
+            </LinearLayout>
+
+            <RatingBar
+                android:id="@+id/sum_ratingbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                android:stepSize="0.1"/>
+
 
         </LinearLayout>
 
@@ -131,6 +164,51 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="55dp"
         android:text="한줄 평 작성하기" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/user"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="user name"/>
+
+            <TextView
+                android:id="@+id/review"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="review"/>
+
+        </LinearLayout>
+
+        <RatingBar
+            android:id="@+id/user1_ratingbar"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/ratingBarStyleSmall" />
+
+    </LinearLayout>
 
     <Button
         android:layout_width="wrap_content"
