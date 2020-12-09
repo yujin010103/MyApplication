@@ -9,7 +9,7 @@ public class perfume {
 
     public perfume(){}
 
-    public int getPhoto() {
+    public String getPhoto() {
         return photo;
     }
 

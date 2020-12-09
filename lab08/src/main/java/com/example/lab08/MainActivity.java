@@ -55,7 +55,9 @@ public class MainActivity extends AppCompatActivity {
                     perfume info = snapshot.getValue(perfume.class); // 만들어뒀던 User 객체에 데이터를 담는다.
                     test = info.getName();
                     if(test.equals("길티")){
-                        photoImage.setImageResource(info.getPhoto());
+                        Glide.with(getApplicationContext())
+                                .load(info.getPhoto())
+                                .into(photoImage);
                         nameText.setText(test);
                         brandText.setText(info.getBrand());
                         typeText.setText(info.getType());
